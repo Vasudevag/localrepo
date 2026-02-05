@@ -1,0 +1,20 @@
+name: Day2-learnig about the checkout function
+
+on:
+  push
+
+jobs:
+  checkout-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repositery
+        uses: actions/checkout@v2
+
+      - name: List Files
+        run: ls
+        
+      - name: Print Currrent Working Directory
+        run: pwd
+       
+      
