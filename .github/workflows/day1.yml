@@ -9,7 +9,10 @@ jobs:
 
      steps:
        - name: Print Hello
-         run: echo "Hello World from github actions"
+         run: |
+           echo "My First Github Action"
+           echo "Runnig on ubuntu"
+           uname -a
       
        
 
