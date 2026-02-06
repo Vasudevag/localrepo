@@ -1,0 +1,20 @@
+name: Day 3- Variables
+
+on:
+ push:
+
+jobs:
+  variable-job:
+    runs-on: ubuntu-latest
+    env:
+      app_name: my-devops-app
+      environment: dev
+    steps:
+      - name: Print variables
+        run: |
+         echo "This is my $app_name"
+         echo "This is my $environemnt
+      
+      
+
+ 
