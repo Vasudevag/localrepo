@@ -16,7 +16,7 @@ jobs:
          echo "This is my $environment"
       - name: secret
         run: |
-          echo "This is my "${{secrets.My_Secret}}"
+          echo "This is my "${{secrets.MY_SECRET}}"
           
       
       
