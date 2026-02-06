@@ -1,0 +1,25 @@
+name: Mutiple jobs
+on:
+ workflow_dispatch:
+jobs:
+   bulid:
+     runs-on: ubuntu-latest
+     steps:
+      - name: to bulid
+        run: echo "This bulid phase" 
+  test:
+     runs-on: ubuntu-latest
+     need: bulid
+     steps:
+      - name: to test
+        run: echo "This is for test phase"
+  depoly:
+     runs-on: ubuntu-latest
+     need: depoly
+     steps:
+      - name:  to depoly
+        run: echo "this is to depoly"
+      
+    
+  
+        
