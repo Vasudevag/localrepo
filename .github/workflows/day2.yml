@@ -1,7 +1,7 @@
 name: Day2-learnig about the checkout function
 
 on:
-  push
+  workflow_dispatch: 
 
 jobs:
   checkout-job:
