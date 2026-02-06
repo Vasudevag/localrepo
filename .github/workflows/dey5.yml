@@ -1,24 +1,24 @@
 name: Mutiple jobs
 on:
- workflow_dispatch:
+  workflow_dispatch:
 jobs:
-   bulid:
+   build:
      runs-on: ubuntu-latest
      steps:
-      - name: to bulid
-        run: echo "This bulid phase" 
-  test:
+      - name: to build
+        run: echo "This build phase" 
+   test:
      runs-on: ubuntu-latest
-     need: bulid
+     needs: build
      steps:
       - name: to test
         run: echo "This is for test phase"
-  depoly:
+   deploy:
      runs-on: ubuntu-latest
-     need: depoly
+     needs: test
      steps:
-      - name:  to depoly
-        run: echo "this is to depoly"
+      - name:  to deploy
+        run: echo "this is to deploy"
       
     
   
