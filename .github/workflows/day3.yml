@@ -13,7 +13,7 @@ jobs:
       - name: Print variables
         run: |
          echo "This is my $app_name"
-         echo "This is my $environemnt
+         echo "This is my $environemnt"
       
       
 
