@@ -1,0 +1,18 @@
+name: Day-1-First WorkFlow
+
+on:
+ push:
+
+jobs:
+  first-job:
+     runs-on: ubuntu-latest
+
+     steps:
+       - name: Print Hello
+         run: |
+           echo "My First Github Action"
+           echo "Runnig on ubuntu"
+           uname -a
+      
+       
+

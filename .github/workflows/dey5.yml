@@ -1,0 +1,25 @@
+name: Mutiple jobs
+on:
+  workflow_dispatch:
+jobs:
+   build:
+     runs-on: ubuntu-latest
+     steps:
+      - name: to build
+        run: echo "This build phase" 
+   test:
+     runs-on: ubuntu-latest
+     needs: build
+     steps:
+      - name: to test
+        run: echo "This is for test phase"
+   deploy:
+     runs-on: ubuntu-latest
+     needs: test
+     steps:
+      - name:  to deploy
+        run: echo "this is to deploy"
+      
+    
+  
+        
