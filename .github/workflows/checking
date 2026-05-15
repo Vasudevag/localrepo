@@ -1,0 +1,23 @@
+name: Test Inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Select Environment
+        required: true
+        type: choice
+        options:
+          - OP1
+          - OPC
+          - OP4
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Selected Option
+        run: |
+          echo "Selected environment is:"
+          echo "${{ github.event.inputs.environment }}"
